@@ -1,0 +1,23 @@
+
+
+.header-cont{
+    background-color: #358AD6;
+    min-width: 100vw;
+    height: 55px;
+    display: flex;
+}
+h2{
+  margin: 8px 0px 0px 36px;
+  color: white;
+  font-family: 'Fredoka One', cursive;
+
+}
+.title-cont{
+    background-color: #195E9C;
+    width: 202px;
+}
+input{
+    height: 20px;
+    width: 200px;
+    margin: 30px 0px 0px 200px;
+}

@@ -1,0 +1,30 @@
+.nav-cont{
+    background-color: #1a1c20;
+    margin: 0;
+    height: 500px;
+    width: 200px;
+    border: 1px #1a1c20 solid;
+}
+ul{
+  margin-top: 30px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+li{
+    color: #B4B4B4;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;  
+    transition: all 0.3s linear; 
+   
+}
+li:hover{
+ padding-left: 6px;
+ color: #358AD6;
+}
+
+a{
+  text-decoration: none;
+}
