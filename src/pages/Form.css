@@ -1,0 +1,80 @@
+.modal-cont {
+    z-index: 5;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.Login-container>p {
+    cursor: pointer;
+}
+
+.close-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.close-container > p{
+    cursor: pointer;
+  font-size: 25px;
+  margin: 0px -43px 0px 0px;
+}
+
+
+
+.Login-container {
+    width: 350px;
+    height: fit-content;
+    background-color: white;
+    font-family: "roboto", "san-serif";
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Login-container>h1 {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.input-container>input {
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border-style: none;
+    border-bottom: 2px solid grey;
+    margin-bottom: 10px;
+}
+
+form>button {
+    color: white;
+    float: right;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #358AD6;
+    font-family: 'Fredoka One', cursive;
+    margin: 20px 0px 20px 0px;
+}

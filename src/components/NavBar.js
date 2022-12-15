@@ -1,19 +1,33 @@
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import { LogOut } from "../slices/LoginSlice";
+import { useDispatch } from "react-redux";
 export const NavBar = () => {
-  const conso = (e) => {
-    console.log(e.target.textContent);
-  };
+  const dispatch = useDispatch()
+const Logout=()=>{
+  localStorage.clear()
+  dispatch(LogOut())
+}
   return (
+    
     <div className="nav-cont">
       <ul>
-        <Link to="/dsdsadas">
-          {" "}
-          <li onClick={conso}>New Releases</li>{" "}
+        <Link to="/">
+          <li tabIndex="1">
+            New Releases
+          </li>{" "}
         </Link>
-        <Link><li onClick={conso}>Favourites</li></Link>
-        <Link><li>Watch later</li></Link>
+        <Link to="/favmovies" >
+          <li  tabIndex="1">
+            Favourites
+          </li>
+        </Link>
+        <Link to="/GenreResults">
+          <li tabIndex="1">Search by categories</li>
+        </Link>
+        <li onClick={Logout}>Logout</li>
       </ul>
     </div>
+
   );
 };

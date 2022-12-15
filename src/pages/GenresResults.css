@@ -11,6 +11,22 @@
   display: flex;
 }
 
+.select-genres-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.select-genres {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #B4B4B4;
+  background-color: #222a31;
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  font-size: 31px;
+}
+
 .movies-container {
   height: 100%;
   width: 90%;
@@ -22,55 +38,46 @@
   margin-top: 40px;
 }
 
-.cont{
+.cont {
   display: flex;
   flex-direction: column;
 }
 
-.cont > h1{
+.select-genres-cont>h1 {
   margin-left: 40px;
   font-family: 'Roboto', sans-serif;
-  font-weight:300;
+  font-weight: 300;
   color: #B4B4B4;
 
 }
 
-@media screen and (max-width: 800px) {
-  .section-container{
-    display: flex;
-    flex-direction: column;
-    color: red;
-    
-  }
-  .nav-bar{
-    width: 100%;
-   
-  }
-  
-}
 
 @media screen and (max-width: 800px) {
-  .section-container{
+  .section-container {
     display: flex;
     flex-direction: column;
-    color: red;
-    
   }
-  .nav-bar{
+
+  .nav-bar {
     width: 100%;
-   
   }
-  
+
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
 
-  .movies-container   {  
-     justify-content: center;
+  .movies-container {
+    justify-content: center;
 
   }
-  .nav-bar{
-    width: 100%;
-   
+
+  .select-genres-cont>h1 {
+    font-size: 20px;
   }
+
+  .select-genres {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
 }

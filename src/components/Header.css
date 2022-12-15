@@ -1,10 +1,9 @@
-
-
 .header-cont{
     background-color: #358AD6;
-    min-width: 100vw;
+    width: 100%;
     height: 55px;
     display: flex;
+
 }
 h2{
   margin: 8px 0px 0px 36px;
@@ -12,12 +11,67 @@ h2{
   font-family: 'Fredoka One', cursive;
 
 }
+.title-cont > a{
+    text-decoration: none;
+}
+
 .title-cont{
     background-color: #195E9C;
     width: 202px;
 }
-input{
+.input-button-cont> input{
     height: 20px;
     width: 200px;
-    margin: 30px 0px 0px 200px;
+    background-color: #358AD6;
+    border-style: none;
+    margin: 11px 0px 0px 51px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;;
+    color: white !important;
+    border-bottom: 1px solid #b4b4b4;
+   /* margin: 30px 0px 0px 200px;*/
 }
+.input-button-cont > input:focus{
+    outline: none;
+}
+
+.input-button-cont > input::placeholder{
+    color: white;
+}
+.input-button-cont{
+    width: 81%;
+display: flex;
+justify-content: space-between;
+}
+.input-button-cont > button{
+    float: right;
+    background-color: #358AD6;
+    color: white;
+    border: none;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 100;
+
+}
+
+@media screen and (max-width: 800px) {
+    .header-cont{
+        width: 100%;
+        height: 55px;
+        display: flex;
+    }
+    .title-cont >a>h2{
+       font-size: 20px;
+       margin-top: 0;
+    }
+
+    .input-button-cont > input{
+        margin: 10px auto ;
+        width: 50%;
+    }
+    .title-cont{
+        background-color: #195E9C;
+        width: 150px;
+    }
+}
+

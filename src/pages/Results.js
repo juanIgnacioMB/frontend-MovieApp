@@ -1,38 +1,39 @@
 import { NavBar } from "../components/NavBar";
 import { Card } from "../components/Card";
-import { useState, useEffect } from "react";
-import { NewReleases } from "../services/MovieApi";
+import { useState,useEffect} from "react";
 import "./Home.css";
-import { useNavigate } from "react-router-dom/dist";
 import { useSelector } from "react-redux";
+import { getMovieByName } from "../services/MovieApi";
+import { useNavigate } from "react-router-dom";
 
-export const Home = () => {
+export const Results = () => {
   const [movieList, setMovieList] = useState([]);
-  const navigate = useNavigate();
-  const isLoged = useSelector((state) => state.isLogin.value);
+const movieName = useSelector(state => state.movie.value)
+const navigate = useNavigate()
 
-  useEffect(() => {
-    if (!localStorage.getItem("loged")) {
-      navigate("/register");
-    }
-    const getNewReleases = async () => {
-      const response = await NewReleases();
+useEffect(() => {
+  if(movieName === ""){
+    navigate("/")
+  }
+    const getSearch = async () => {
+      const response = await getMovieByName(movieName);
       setMovieList(response.results);
     };
-  
-    getNewReleases();
-  }, [setMovieList,isLoged]);
+    getSearch();
+  }, [movieList, setMovieList]);
 
   return (
     <div className="home-container">
       <div className="section-container">
         <div className="nav-bar">
-          <NavBar />
+        <NavBar />
         </div>
         <div className="cont">
-          <h1>New Releases</h1>
+          {movieList?.length === 0 && <h1>Movie not Found!</h1>}
+          {movieList?.length > 0 && <>
+          <h1>Results of: {movieName}</h1>
           <div className="movies-container">
-            {movieList.map((movie, i) => (
+            {movieList?.map((movie, i) => (
               <Card
                 key={i}
                 title={movie.original_title}
@@ -44,6 +45,9 @@ export const Home = () => {
               />
             ))}
           </div>
+          </>}
+
+          
         </div>
       </div>
     </div>
