@@ -2,10 +2,7 @@ import "./Details.css";
 import { getMovieInfo } from "../services/MovieApi";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addMovie } from "../slices/FavMoviesSlice";
 import { Carrousel } from "../components/Carrousel";
-import { NewReleases } from "../services/MovieApi";
 import { getMoviesByGenre } from "../services/MovieApi";
 
 export const Details = () => {

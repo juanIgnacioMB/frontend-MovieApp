@@ -2,7 +2,6 @@ import "./Form.css";
 import { useForm } from "react-hook-form";
 import firebase from "../firebase/firebase";
 import { useNavigate } from "react-router-dom/dist";
-//import { useState } from "react";
 import { Login } from "./Login";
 import { useSelector, useDispatch } from "react-redux";
 import { UserLogin } from "../slices/LoginSlice";
@@ -12,7 +11,6 @@ export const Register = () => {
   const navigate = useNavigate();
   const loginUser = useSelector((state) => state.isLogin.value);
   const dispatch = useDispatch();
-  //const [isLogin, setIsLogin] = useState(false)
   const {
     register,
     formState: { errors },

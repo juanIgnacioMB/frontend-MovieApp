@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import "./FavMovies.css";
 export const FavMovies = () => {
   const [newMovies, setNewMovies] = useState([]);
-  //const [Movies, setMovies] = useState([]);
   const favMoviesArr = useSelector((state) => state.favmovies.value);
   const isLoged = useSelector((state) => state.isLogin.value);
   const navigate = useNavigate();

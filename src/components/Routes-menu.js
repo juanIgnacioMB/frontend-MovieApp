@@ -11,21 +11,11 @@ import { AnimatePresence } from "framer-motion";
 
 
 export const RoutesMenu = () => {
-  const pageTransition = {
-    in: {
-      opacity: 1,
-      duration: 3,
-    },
-    out: {
-      opacity: 0,
-      duration: 3,
-    },
-  };
+
 
   return (
     <AnimatePresence>
       <BrowserRouter>
-        {/*!localStorage.getItem("loged") && <Register/>*/}
         <Header />
         <div style={{ backgroundColor: "#222a31" }}>
           <Routes>

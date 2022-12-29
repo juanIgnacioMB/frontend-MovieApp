@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { addMovie, removeMovie } from "../slices/FavMoviesSlice";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import {motion } from "framer-motion";
 
 
 export const Card = (props) => {
