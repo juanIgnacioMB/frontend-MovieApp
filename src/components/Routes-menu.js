@@ -35,7 +35,7 @@ export const RoutesMenu = () => {
             <Route path="/details/:id" element={<Details />}></Route>
             <Route path="/GenreResults" element={<GenreResults />}></Route>
             <Route path="/Register" element={<Register />}></Route>
-            <Route path="#" element={<PageNotFound />}></Route>
+            <Route path="/not" element={<PageNotFound />}></Route>
           </Routes>
         </div>
         <Footer />
