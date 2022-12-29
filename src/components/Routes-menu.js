@@ -8,7 +8,7 @@ import { GenreResults } from "../pages/GenresResults";
 import { Register } from "../pages/Register";
 import { Footer } from "./Footer";
 import { AnimatePresence } from "framer-motion";
-import { PageNotFound } from "../pages/PageNotFound";
+
 
 export const RoutesMenu = () => {
   const pageTransition = {
@@ -35,7 +35,6 @@ export const RoutesMenu = () => {
             <Route path="/details/:id" element={<Details />}></Route>
             <Route path="/GenreResults" element={<GenreResults />}></Route>
             <Route path="/Register" element={<Register />}></Route>
-            <Route path="/not" element={<PageNotFound />}></Route>
           </Routes>
         </div>
         <Footer />
