@@ -22,6 +22,7 @@ li{
   transition: all 0.2s linear; 
   height: 30px;
   width: 150px;
+  cursor: pointer;
  
 }
 li:hover{
@@ -42,26 +43,38 @@ text-decoration: none;
 @media screen and (max-width: 800px) {
 
   ul{
-    margin: 0 auto;
+    margin:auto;
     display: flex;
     flex-direction: row;
     width: 90%;
-    max-width: 100%;
+    max-width: 90%;
     height: 30px;
     box-sizing: border-box;
   }
-  
  
   li{
     margin-top: 15px;
     width: 90px;
+    
   }
   .nav-cont{
     width: 99%;
     max-width: 100%;
     height: 70px;
-    
   }
   
   }
   
+  @media screen and (max-width: 400px) {
+    ul{
+      margin-left: -15px;
+    }
+    li{
+      margin-top: 15px;
+      width: 50px;
+      
+    }
+    .nav-cont{
+      height: 80px;
+    }
+  }

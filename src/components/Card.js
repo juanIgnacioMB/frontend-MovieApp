@@ -3,6 +3,9 @@ import { useDispatch } from "react-redux";
 import { addMovie, removeMovie } from "../slices/FavMoviesSlice";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+
+
 export const Card = (props) => {
   const [addedToFav, setAddedToFav] = useState(false);
 
@@ -31,13 +34,35 @@ export const Card = (props) => {
         release: release,
         Title: title,
         ranking: ranking,
-        image: image,
+        image: "https://image.tmdb.org/t/p/original" +image,
         id: id,
       })
     );
     setAddedToFav(true);
   };
+
+  const CardTransition = {
+    in: {
+      opacity: 1,
+      transition:{
+        duration:0.7,
+      }
+    },
+    out: {
+      opacity: 0,
+     
+      
+    },
+  };
+  
   return (
+    <motion.div
+            className="page"
+              initial="out"
+              animate="in"
+              exit="out"
+              variants={CardTransition}
+            >
     <div className="Card">
       {favbtn && (
         <button className="button-fav" onClick={addToFav}>
@@ -71,5 +96,6 @@ export const Card = (props) => {
       <h4>{shortTitle(title)}</h4>
       <p>release: {release}</p>
     </div>
+    </motion.div>
   );
 };

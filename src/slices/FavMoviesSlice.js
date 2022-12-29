@@ -8,6 +8,7 @@ export const FavMoviesSlice = createSlice({
     },
   reducers:{
     addMovie:(state,action)=>{
+    
         state.value = [...state.value,action.payload]
     },
     removeMovie:(state,action)=>{
@@ -15,6 +16,7 @@ state.value = state.value.filter((favMovie) =>  favMovie.id !== action.payload.i
 
     }
   }
+  
 });
 
 

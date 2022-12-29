@@ -1,12 +1,14 @@
 import "./NavBar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LogOut } from "../slices/LoginSlice";
 import { useDispatch } from "react-redux";
+
 export const NavBar = () => {
   const dispatch = useDispatch()
 const Logout=()=>{
   localStorage.clear()
   dispatch(LogOut())
+  useNavigate("/register")
 }
   return (
     
@@ -17,13 +19,14 @@ const Logout=()=>{
             New Releases
           </li>{" "}
         </Link>
+        
+        <Link to="/GenreResults">
+          <li tabIndex="1">Search categories</li>
+        </Link>
         <Link to="/favmovies" >
           <li  tabIndex="1">
             Favourites
           </li>
-        </Link>
-        <Link to="/GenreResults">
-          <li tabIndex="1">Search by categories</li>
         </Link>
         <li onClick={Logout}>Logout</li>
       </ul>

@@ -65,7 +65,22 @@
     border-style: none;
     border-bottom: 2px solid grey;
     margin-bottom: 10px;
+    
 }
+
+.input-container >p{
+    color: red;
+    margin-top: 0;
+}
+
+.errorInput{
+    border: 1px solid red !important;
+    border-radius: 5px;
+    
+    
+}
+
+
 
 form>button {
     color: white;

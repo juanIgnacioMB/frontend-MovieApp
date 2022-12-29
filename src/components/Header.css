@@ -5,8 +5,8 @@
     display: flex;
 
 }
-h2{
-  margin: 8px 0px 0px 36px;
+.title-cont >a > h2{
+ margin: 8px 0px 0px 36px;
   color: white;
   font-family: 'Fredoka One', cursive;
 
@@ -60,9 +60,13 @@ justify-content: space-between;
         height: 55px;
         display: flex;
     }
+    .title-cont >a{
+        margin: 0 auto;
+    }
     .title-cont >a>h2{
+      margin-top: 0;
        font-size: 20px;
-       margin-top: 0;
+       
     }
 
     .input-button-cont > input{
@@ -71,7 +75,7 @@ justify-content: space-between;
     }
     .title-cont{
         background-color: #195E9C;
-        width: 150px;
+        width: 120px;
     }
 }
 

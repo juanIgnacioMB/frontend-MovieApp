@@ -24,6 +24,7 @@ export const Home = () => {
   }, [setMovieList,isLoged]);
 
   return (
+    <>
     <div className="home-container">
       <div className="section-container">
         <div className="nav-bar">
@@ -47,5 +48,6 @@ export const Home = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };

@@ -4,32 +4,27 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addMovie } from "../slices/FavMoviesSlice";
-
+import { Carrousel } from "../components/Carrousel";
+import { NewReleases } from "../services/MovieApi";
+import { getMoviesByGenre } from "../services/MovieApi";
 
 export const Details = () => {
   const [movieInfo, setMovieInfo] = useState({});
-  const dispatch = useDispatch()
+  const [movieList, setMovieList] = useState([]);
 
   const id = useParams();
-  const linear = "linear-gradient(to bottom, #f5f6ff00, ##222a31)";
   useEffect(() => {
     const getInfo = async () => {
       const response = await getMovieInfo(id.id);
       setMovieInfo(response);
+      const response2 = await getMoviesByGenre(response.genres[0]?.id);
+      setMovieList(response2.results);
+      window.scrollTo(0, 0);
     };
 
     getInfo();
-  }, []);
-  const added = (e) => {
-    e.target.innerHTML = "Added ♡";
-    dispatch(addMovie({
-      Title:movieInfo.original_title,
-      release:movieInfo.release_date,
-      ranking: movieInfo.vote_average,
-      image: "https://image.tmdb.org/t/p/original/" + movieInfo.poster_path,
-      id: movieInfo.id
-    }))
-  };
+
+  }, [id, setMovieList, setMovieInfo]);
 
   return (
     <div className="detail-container">
@@ -46,17 +41,20 @@ export const Details = () => {
       <div className="movie-details">
         <div className="img-container">
           <h3>{movieInfo.vote_average}</h3>
-          {movieInfo.poster_path === null &&
-          <img
-          src="https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie.jpg" 
-          alt=""
-        />}
-        {movieInfo.poster_path !== null &&
-          <img
-          src={"https://image.tmdb.org/t/p/original/" + movieInfo.poster_path}
-          alt=""
-        />}
-          
+          {movieInfo.poster_path === null && (
+            <img
+              src="https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie.jpg"
+              alt=""
+            />
+          )}
+          {movieInfo.poster_path !== null && (
+            <img
+              src={
+                "https://image.tmdb.org/t/p/original/" + movieInfo.poster_path
+              }
+              alt=""
+            />
+          )}
         </div>
         <div className="movie-info">
           <h1>{movieInfo.original_title}</h1>
@@ -77,11 +75,12 @@ export const Details = () => {
                 </a>
               </button>
             )}
-            <button className="favbtn" onClick={added}>
-              Add to favourites ♡
-            </button>
           </div>
         </div>
+      </div>
+
+      <div className="carrousel-cont">
+        <Carrousel MovieList={movieList} />
       </div>
     </div>
   );

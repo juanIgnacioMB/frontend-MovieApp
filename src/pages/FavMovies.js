@@ -7,25 +7,28 @@ import { useNavigate } from "react-router-dom";
 import "./FavMovies.css";
 export const FavMovies = () => {
   const [newMovies, setNewMovies] = useState([]);
-  const [Movies, setMovies] = useState([]);
+  //const [Movies, setMovies] = useState([]);
   const favMoviesArr = useSelector((state) => state.favmovies.value);
-  const isLoged = useSelector(state => state.isLogin.value)
-  const navigate = useNavigate()
-  
+  const isLoged = useSelector((state) => state.isLogin.value);
+  const navigate = useNavigate();
+
   useEffect(() => {
-    if(!localStorage.getItem("loged")){
-      navigate("/")
+    if (!localStorage.getItem("loged")) {
+      navigate("/");
     }
-    
+
     const favs = () => {
       const uniqueArrayMovies = [
         ...new Set(favMoviesArr.map((o) => JSON.stringify(o))),
       ].map((s) => JSON.parse(s));
+
       setNewMovies(uniqueArrayMovies);
     };
 
     favs();
-  }, [favMoviesArr,isLoged]);
+  }, [favMoviesArr, isLoged]);
+
+  
   return (
     <>
       <div className="favs-container">
@@ -33,7 +36,6 @@ export const FavMovies = () => {
         <div className="cont">
           <h1>favourites movies</h1>
           <div className="favs-movies-container">
-           
             {newMovies?.map((movie, i) => (
               <Card
                 key={i}

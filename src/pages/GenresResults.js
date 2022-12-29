@@ -4,13 +4,22 @@ import { useState, useEffect } from "react";
 import "./GenresResults.css";
 import { getGenres } from "../services/MovieApi";
 import { getMoviesByGenre } from "../services/MovieApi";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 
 export const GenreResults = () => {
   const [genreList, setGenreList] = useState([]);
   const [genreMovies, setGenreMovies] = useState([]);
   const [genreSearch, setGenreSearch] = useState();
 
+  const isLoged = useSelector(state => state.isLogin.value)
+  const navigate = useNavigate()
+
   useEffect(() => {
+    if(!localStorage.getItem("loged")){
+      navigate("/")
+    }
     const getGenreList = async () => {
       const response = await getGenres();
       setGenreList(response.genres);
@@ -23,7 +32,7 @@ export const GenreResults = () => {
 
     getGenreList();
     getGenreMovies();
-  }, [genreSearch, setGenreList]);
+  }, [genreSearch, setGenreList,isLoged]);
 
   return (
     <div className="home-container">

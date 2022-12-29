@@ -1,20 +1,16 @@
 .detail-container {
     height: 100%;
+    min-height: 100vh;
     color: #b4b4b4;
+
 }
 
 .topbackground {
-    /* background:
-        linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(34, 42, 49, 1.000))
-        /*url('https://image.tmdb.org/t/p/original/zi2oYYNSSv7t44iSt5YrxHX9PYs.jpg');*/
-
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 230px;
-
-
 }
 
 .topbackground2 {
@@ -22,7 +18,7 @@
     height: 100px;
     margin-top: -100px;
     width: 100%;
-   
+
 }
 
 .movie-details {
@@ -73,19 +69,22 @@
     margin-top: -30px;
 }
 
-.btn-container >button > a {
+.btn-container>button>a {
     color: white;
-   
+
     text-decoration: none;
-    
+
 }
-.genre-cont{
+
+.genre-cont {
     display: flex;
     flex-direction: row;
 }
-.genre-cont > p{
+
+.genre-cont>p {
     margin: -15px 10px 10px 0px;
 }
+
 .btn-container {
     display: flex;
     flex-direction: row;
@@ -94,6 +93,7 @@
 }
 
 .watchlaterbtn {
+    height: 45px;
     width: 140px;
     background-color: #358AD6;
     border-radius: 10px;
@@ -102,57 +102,89 @@
     color: white;
     font-weight: bold;
     font-size: 14px;
-
-
-}
-
-.favbtn {
-    width: 160px;
-    height: 40px;
-    background-color: #f6546a;
-    border-radius: 10px;
-    border: 1px white solid;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    margin-left: 65px;
+    transition: all 0.2s linear;
 
 }
 
-.favbtn:active,
-.watchlaterbtn:active,
-.favbtn:focus,
-.watchlaterbtn:focus {
+
+.watchlaterbtn:hover {
     filter: brightness(1.2);
 }
 
-@media screen and (max-width: 800px) {
+.carrousel-cont {
+    background-color: #222a31;
+    width: 750px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1050px) {
 
     .movie-details {
         display: flex;
         flex-direction: column;
-        
+
     }
-    .movie-info{
+
+    .movie-info {
         margin: 0 auto;
     }
-    
-.movie-info>h1{
-    font-size: 47px;
+
+    .movie-info>h1 {
+        font-size: 47px;
+    }
+
+    .img-container>img {
+        width: 200px;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .movie-info {
+        width: 70%;
+    }
+
+    .topbackground2 {
+        width: 100%;
+        margin-top: -99px;
+    }
+
+    .carrousel-cont {
+        margin-top: -100px;
+
+    }
 }
 
+@media screen and (max-width: 800px) {
     .img-container>img {
         width: 150px;
         height: 200px;
         margin: 0 auto;
     }
 
-    .movie-info{
-        width: 70%;
-    }
 
-    .topbackground2{
-        width: 100%;
-        margin-top: -99px;
+    @media screen and (max-width: 400px) {
+        .genre-cont {
+            max-width: 300px;
+            flex-wrap: wrap;
+        }
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .carrousel-cont {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .carrousel-cont {
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carrousel-cont {
+        width: 180px;
     }
 }
