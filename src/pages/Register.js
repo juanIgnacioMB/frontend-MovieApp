@@ -37,7 +37,7 @@ export const Register = () => {
         "This email is already connected to an account",
         "error"
       );
-      console.log(e)
+      
     }
   };
 
