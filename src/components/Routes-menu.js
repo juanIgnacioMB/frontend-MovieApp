@@ -15,7 +15,7 @@ export const RoutesMenu = () => {
 
   return (
     <AnimatePresence>
-      <BrowserRouter>
+      <BrowserRouter basename="frontend-movieApp">
         <Header />
         <div style={{ backgroundColor: "#222a31" }}>
           <Routes>
