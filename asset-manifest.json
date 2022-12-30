@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/frontend-movieApp/static/css/main.f842f0d0.css",
-    "main.js": "/frontend-movieApp/static/js/main.60d6d872.js",
-    "static/js/787.96fd6510.chunk.js": "/frontend-movieApp/static/js/787.96fd6510.chunk.js",
-    "static/media/slick.svg": "/frontend-movieApp/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/frontend-movieApp/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/frontend-movieApp/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/frontend-movieApp/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/frontend-movieApp/index.html",
-    "main.f842f0d0.css.map": "/frontend-movieApp/static/css/main.f842f0d0.css.map",
-    "main.60d6d872.js.map": "/frontend-movieApp/static/js/main.60d6d872.js.map",
-    "787.96fd6510.chunk.js.map": "/frontend-movieApp/static/js/787.96fd6510.chunk.js.map"
+    "main.css": "/frontend-MovieApp/static/css/main.f3ed46ca.css",
+    "main.js": "/frontend-MovieApp/static/js/main.d937d7f1.js",
+    "static/js/787.96fd6510.chunk.js": "/frontend-MovieApp/static/js/787.96fd6510.chunk.js",
+    "static/media/slick.svg": "/frontend-MovieApp/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/frontend-MovieApp/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/frontend-MovieApp/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/frontend-MovieApp/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/frontend-MovieApp/index.html",
+    "main.f3ed46ca.css.map": "/frontend-MovieApp/static/css/main.f3ed46ca.css.map",
+    "main.d937d7f1.js.map": "/frontend-MovieApp/static/js/main.d937d7f1.js.map",
+    "787.96fd6510.chunk.js.map": "/frontend-MovieApp/static/js/787.96fd6510.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f842f0d0.css",
-    "static/js/main.60d6d872.js"
+    "static/css/main.f3ed46ca.css",
+    "static/js/main.d937d7f1.js"
   ]
 }
