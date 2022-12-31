@@ -25,6 +25,7 @@ export const RoutesMenu = () => {
             <Route path="/details/:id" element={<Details />}></Route>
             <Route path="/GenreResults" element={<GenreResults />}></Route>
             <Route path="/Register" element={<Register />}></Route>
+            <Route path="*" element={<GenreResults />}></Route>
           </Routes>
         </div>
         <Footer />

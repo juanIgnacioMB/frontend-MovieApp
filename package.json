@@ -1,7 +1,6 @@
 {
   "name": "front-movie-app",
   "version": "0.1.0",
-  "homepage":"https://juanIgnacioMB.github.io/frontend-MovieApp",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
